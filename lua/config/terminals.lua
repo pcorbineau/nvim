@@ -71,7 +71,8 @@ local function toggle_term()
     -- Case 3: In a non-terminal, go to the most recent terminal
     focus_bufnr(bufnr)
 end
-vim.keymap.set("n", "<leader>tt", toggle_term, { desc = "toggle terminal" })
+vim.keymap.set({ "n", "t" }, "<A-t>", toggle_term, { desc = "toggle terminal" })
+-- vim.keymap.set("n", "<leader>tt", toggle_term, { desc = "toggle terminal" })
 vim.keymap.set("t", "<esc><esc>", "<C-\\><C-n>")
 
 return toggle_term
